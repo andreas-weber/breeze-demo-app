@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="breeze-demo-app" default="help">
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+    <!-- | Init                                     -->
+    <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- Vars -->
+    <property name="basedir" value="."/>
+
+    <!-- Command help -->
+    <target name="help">
+        <echo message=""/>
+        <echo message="The following commands are available:"/>
+        <echo message=""/>
+        <echo message="|   +++ Tools +++"/>
+        <echo message="|-- package              (Create installable package)"/>
+        <echo message=""/>
+    </target>
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+    <!-- | Build                                    -->
+    <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- create installable package -->
+    <target name="package">
+        <mkdir dir="${basedir}/build/package"/>
+        <exec dir="${basedir}" executable="${basedir}/resources/packaging/create-package.sh">
+            <arg value="${ant.project.name}"/>
+            <arg path="${basedir}"/>
+            <arg path="${basedir}/build/package"/>
+        </exec>
+    </target>
+
+</project>

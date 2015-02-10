@@ -1,0 +1,29 @@
+{
+    "name": "andreas-weber/breeze-demo-app",
+    "description": "Breeze demo application.",
+    "type": "library",
+    "homepage": "https://github.com/andreas-weber/breeze-demo-app",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Weber",
+            "email": "code@andreas-weber.me",
+            "role": "lead"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/andreas-weber/breeze-demo-app/issues"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.4",
+        "silex/silex": "~2.0@dev",
+        "monolog/monolog": "~1.12@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "AndreasWeber\\Breeze\\": "src/"
+        }
+    }
+}

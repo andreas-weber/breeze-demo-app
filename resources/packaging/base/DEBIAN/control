@@ -1,0 +1,5 @@
+Package: breeze-demo-app
+Description: Breeze Demo Application
+Maintainer: Andreas Weber <code@andreas-weber.me>
+Version: 0.0.1
+Architecture: all

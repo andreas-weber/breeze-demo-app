@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+	addgroup --system --quiet breeze
+	adduser --system --quiet --ingroup breeze --no-create-home breeze
+
+	chown -R breeze:breeze /var/log/breeze
+
+	sudo chmod +x /etc/init.d/breeze
+    sudo chown root:root /etc/init.d/breeze
+
+    sudo update-rc.d breeze defaults
+    sudo update-rc.d breeze enable
+fi
